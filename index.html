@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+    <main class="flex-column flex-lg-row">
+        <div id="city-search" class="col-lg-3">
+        <!-- <div id="city-search" class="col-1 col-md-3"> -->
+          <form id="city-search-form">
+            <label for="city-input">Search for a City:</label>
+            <div class="input-group">
+              <input type="text" id="city-input">
+              <button class="btn-search"><i class="fas fa-search"></i></button>
+            </div>
+          </form>
+          <div id="city-list" class="city-list">
+            <ul>
+            </ul>
+          </div>
+        </div>
+        <div id="weather-details" class="col-lg-9 p-1">
+        <!-- <div id="weather-details" class="col-9 p-1"> -->
+          <div id="current-weather" class="current-weather">
+            <h2>
+              <span id="city-name"></span> 
+              <span id="date"></span> 
+              <img id="current-icon"/>
+            </h2>
+            <p>Temperature: <span id="current-temp"></span>°F</p>
+            <p>Humidity: <span id="current-humidity"></span>%</p>
+            <p>Wind Speed: <span id="current-wind"></span> MPH</p>
+            <p>UV Index: <span id="current-uv"></span></p>
+          </div>
+          <div class="five-day">
+            <h3>5-Day Forecast:</h3>
+            <div id="cards-container" class="cards flex-column flex-lg-row justify-space-between ">
+            </div>
+          </div>
+        </div>
+      </main>
+      <script src="https://kit.fontawesome.com/4a35b8bfa2.js" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+      <script src="./assets/js/script.js"></script>
+</body>
+</html>
